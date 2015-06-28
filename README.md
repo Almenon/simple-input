@@ -1,15 +1,23 @@
 # simple-input
-A simple javascript file for listening to keyboard events
+A simple javascript file for reacting to keyboard events.
 
-Use this format for adding single listener:
+It automatically creates a listener for 'keydown' events.  You can provide it functions to call for a specified key.  Either use addListener('*keyName*', myfunction) or pass in a object to addListeners:
 
-addListener('f', myfunction);
+addListeners({
 
-Use this format for adding multiple listeners:
+  w: myfunction2
+  
+  a: myfunction3
+  
+})
 
-var Listeners = {
-  w: myfunction1
-  a: myfunction2
-}
-addListeners(Listeners);
+Possible features in future version:
 
+* support for 'keyup', 'mousedown', and other listeners
+* support for ***REMOVED*** geusters
+* key combinations
+* wildcards (ex: 'any', 'number')
+* integration with other libraries
+* a 'movement' listener that automatically passes in movement info based on WASD keys (useful for canvas games)
+
+Don't like my library?  Want more features?  Try http://dmauro.github.io/Keypress/
