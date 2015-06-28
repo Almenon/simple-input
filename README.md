@@ -4,11 +4,8 @@ A simple javascript file for reacting to keyboard events.
 It automatically creates a listener for 'keydown' events.  You can provide it functions to call for a specified key.  Either use addListener('*keyName*', myfunction) or pass in a object to addListeners:
 
 addListeners({
-
   w: myfunction2
-  
   a: myfunction3
-  
 })
 
 Possible features in future version:
