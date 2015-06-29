@@ -27,9 +27,8 @@ var keyCodes = {
 };
 
 function addListener(button, func){
-    // the keyCode of the button is mapped to the function
-    actions[keyCodes[button]] = func;
-  }
+// the keyCode of the button is mapped to the function
+actions[keyCodes[button]] = func;
 }
 
 function removeListener(button){
@@ -37,22 +36,21 @@ function removeListener(button){
 }
 
 function addListeners(listeners){
-  for (button in listeners){
-    addListenbutton,listeners[button]);
+  for (var button in listeners){
+    addListener(button, listeners[button]);
   }
 }
 
 function removeListeners(listeners){
-  for (button in listeners){
-    removeListener(button,listeners[button]);
+  for (var button in listeners){
+    removeListener(button, listeners[button]);
   }
 }
 
 function keydown(e){
-  if(actions[e.keyCode] != undefined) actions[e.keyCode]();
+  if(actions[e.keyCode] !== undefined) actions[e.keyCode]();
 }
 
 function mousedown(e){
-  if(actions[e.keyCode] != undefined) actions[e.keyCode]();
+  if(actions[e.keyCode] !== undefined) actions[e.keyCode]();
 }
-
