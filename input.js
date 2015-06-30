@@ -48,9 +48,9 @@ function removeListeners(listeners){
 }
 
 function keydown(e){
-  if(actions[e.keyCode] !== undefined) actions[e.keyCode]();
+  if(actions[e.keyCode] !== undefined) actions[e.keyCode](e);
 }
 
 function mousedown(e){
-  if(actions[e.keyCode] !== undefined) actions[e.keyCode]();
+  if(actions[e.button] !== undefined) actions[e.keyCode](e);
 }
