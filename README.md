@@ -2,16 +2,16 @@
 A simple javascript file for reacting to keyboard events.
 
 It automatically creates a listener for 'keydown' events.  You can provide it functions to call for a specified key.  Either use addListener('*keyName*', myfunction) or pass in a object to addListeners:
-
-addListeners({
-  w: myfunction2
-  a: myfunction3
-})
-
+```javascript
+  addListeners({
+    w: myfunction2
+    a: myfunction3
+  })
+```
 Possible features in future version:
 
-* support for 'keyup', 'mousedown', and other listeners
-* support for ***REMOVED*** geusters
+* support for 'keyup', and other listeners
+* support for swipe gestures
 * key combinations
 * wildcards (ex: 'any', 'number')
 * integration with other libraries
